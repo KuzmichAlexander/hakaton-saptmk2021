@@ -20,13 +20,13 @@ namespace Hahatun.Controllers
                 manufacturercode = 0001,
                 companycode = "Severstal",
                 checkcode = 27146481,
-                productname = "новая труба 15122020",
+                productname = "новаятруба15122020",
                 status = 001,
                 certurl = "www.new.ru",
             };
 
 
-            return View(cert);
+            return View();
         } 
         
         //public ActionResult Check(int certnumber, DateTime certdate, int manufacturercode, string companycode, int checkcode, string productname, int status, string certurl)
