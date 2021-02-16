@@ -13,4 +13,8 @@
     <None Include="Properties\PublishProfiles\FTPProfile_pubxml.user" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Files\" />
+  </ItemGroup>
+
 </Project>
