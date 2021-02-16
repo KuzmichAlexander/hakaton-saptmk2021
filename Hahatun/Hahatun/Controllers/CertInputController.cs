@@ -12,10 +12,8 @@ namespace Hahatun.Controllers
         // GET: CertInputController
         public ActionResult Index()
         {
-            return View();
+            return View("CertInput");
         }
-
-
 
 
         // GET: CertInputController/Details/5
