@@ -25,9 +25,51 @@ namespace Hahatun.Controllers
             ViewBag.certnumber = certInfo.certnumber;
             ViewBag.date = date.ToShortDateString();
 
+            ViewBag.valid = CheckCertInfo(certInfo);
             return View();
         }
 
+        public bool CheckCertInfo(CertInfoModel info)
+        {
+            return certInfoModels.Contains(info);
+        }
+
+        List<CertInfoModel> certInfoModels = new List<CertInfoModel>
+        {
+            new CertInfoModel(){
+                certnumber = 69182968083432,
+                certdate = "2018.05.29",
+                manufacturercode = 0001,
+                companycode = "Severstal",
+                checkcode = 27146481,
+                productname = "новая труба 15122020",
+                status = 001,
+                certurl = "www.new.ru",
+            },
+
+                new CertInfoModel(){
+                certnumber = 111111111111111,
+                certdate = "2018.05.29",
+                manufacturercode = 0001,
+                companycode = "Severstal",
+                checkcode = 27146481,
+                productname = "новая труба 15122020",
+                status = 001,
+                certurl = "www.new.ru",
+            },
+
+                    new CertInfoModel(){
+                certnumber = 99999999999999,
+                certdate = "2018.05.29",
+                manufacturercode = 0001,
+                companycode = "Severstal",
+                checkcode = 27146481,
+                productname = "новая труба 15122020",
+                status = 001,
+                certurl = "www.new.ru",
+            },
+
+        };
 
         //// GET: SertCheckerController/Details/5
         //public ActionResult Details(int id)
