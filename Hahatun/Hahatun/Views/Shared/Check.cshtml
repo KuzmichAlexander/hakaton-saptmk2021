@@ -10,11 +10,38 @@
 <body>
 
     <div id="container">
-        <p>Ваш сертификат действителен @ViewBag.certnumber</p>
+        <p>Cертификат № @ViewBag.certnumber</p>
 
         <p>Дата: @ViewBag.date</p>
+        <div id="isValid"></div>
 
+
+
+        <p>@{
+           @(ViewBag.valid? "Действителен" : "Недействителен");
+        }</p>
     </div>
 
+@*<script>
+    let flag = @ViewBag.valid; 
+    console.log(flag)
+    let isValidInfo = document.querySelector('#isValid');
+    let pInfo = document.createElement('p');
+    pInfo.textContent = 'Сертификат: ';
+    isValidInfo.appendChild(pInfo);
+    if (flag) {
+        let isValid = document.createElement('p');
+        isValid.textContent = "действителен";
+        isValid.style.color = "green";
+        isValidInfo.appendChild(isValid);
+    } else {
+        let isValid = document.createElement('p');
+        isValid.textContent = "не действителен";
+        isValid.style.color = "red";
+        isValidInfo.appendChild(isValid);
+    }
+</script>*@
 <script src="js.js"></script>
+    
+
 </body></html>
