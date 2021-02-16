@@ -1,8 +1,11 @@
-﻿@{
+﻿@model CertInfoModel
+@{ 
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <p>ССЫЛКА <a href="/CertChecker/Check?certnumber=@Model.certnumber&manufacturercode=@Model.manufacturercode&companycode=@Model.companycode&checkcode=@Model.checkcode&productname=@Model.productname&status=@Model.status&certurl=@Model.certurl">ссыль</a></p>
 </div>

@@ -13,7 +13,20 @@ namespace Hahatun.Controllers
         // GET: SertCheckerController
         public ActionResult Index()
         {
-            return View();
+            var cert = new CertInfoModel()
+            {
+                certnumber = 69182968083432,
+                certdate = "2018.05.29",
+                manufacturercode = 0001,
+                companycode = "Severstal",
+                checkcode = 27146481,
+                productname = "новая труба 15122020",
+                status = 001,
+                certurl = "www.new.ru",
+            };
+
+
+            return View(cert);
         } 
         
         //public ActionResult Check(int certnumber, DateTime certdate, int manufacturercode, string companycode, int checkcode, string productname, int status, string certurl)
@@ -23,7 +36,7 @@ namespace Hahatun.Controllers
             DateTime date;
             DateTime.TryParse(certInfo.certdate,out date);
             ViewBag.certnumber = certInfo.certnumber;
-            ViewBag.date = date;
+            ViewBag.date = date.ToShortDateString();
 
             return View();
         }
